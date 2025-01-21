@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="garllery, animation, pic">
+    <link rel="icon" type="image/png" href="flower.png">
+    <title>Garllery Image</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Popins', sans-serif;
+    }
+
+    .background {
+        width: 100%;
+        min-height: 100vh;
+        background-image: linear-gradient(to top right, #cffafe, plum);
+        background-position: center;
+        background-size: cover;
+        padding: 10px 10%;
+        overflow: hidden;
+        position: relative;
+    }
+
+    nav {
+        padding: 10px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo {
+        width: 120px;
+    }
+
+    nav ul li {
+        display: inline-block;
+        list-style: none;
+        margin: 10px 15px;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: #333;
+        font-weight: 400;
+    }
+
+    .login-btn {
+        text-decoration: none;
+        color: #333;
+        margin-right: 15px;
+        font-weight: 400;
+    }
+
+    .btn {
+        display: inline-block;
+        text-decoration: none;
+        padding: 14px 40px;
+        color: #fff;
+        background-image: linear-gradient(45deg, #df4881, #c430d7);
+        font-size: 14px;
+        border-radius: 30px;
+        border-top-right-radius: 0;
+        transition: 0.5s;
+    }
+
+    .contain {
+        margin-top: 10%;
+        max-width: 600px;
+    }
+
+    .content h1 {
+        font-size: 70px;
+        color: #df4881;
+    }
+
+    .content p {
+        margin: 10px 0 30px;
+        color: #333;
+        animation-delay: 0.5s;
+    }
+
+    .content .btn {
+        padding: 15px  80px;
+        font-size: 16px;
+        animation-delay: 0.7s;
+    }
+
+    .btn:hover {
+        border-top-right-radius: 30px;
+    }
+
+    .image {
+        width: 530px;
+        position: absolute;
+        bottom: 0;
+        right: 10%;
+        transition: absolute;
+    }
+
+    .image.animation {
+        animation-delay: 1.5s;
+    }
+
+    .animation {
+        opacity: 0;
+        transform: translateY(30px);
+        animation: moveup 0.5s linear forwards;
+    }
+
+    @keyframes moveup {
+        100%{
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
+
+    .text {
+        text-align: center;
+        margin-top: 30px;
+        font-size: 40px;
+        font-family: 'Poppins',sans-serif;
+    }
+
+    .gallery {
+        height: 80%;
+        width: 100%;
+        display: flex;
+        margin: 5% auto 0;
+        box-sizing: border-box;
+    }
+
+    .image-box {
+        margin: 0 1%;
+        flex-grow: 1;
+        flex-basis: 0;
+        transition: 4.5s;
+    }
+
+    .image-box img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 20px;
+        border-bottom-right-radius: none;
+        transition: 7.5s;
+    }
+
+    .image-box:hover {
+        flex-basis: 50%;
+    }
+
+    .active {
+        flex-basis: 50%;
+    }
+
+    .gallery:hover .active {
+        flex-basis: 0;
+    }
+
+    .image-box:nth-child(1):hover{
+        flex-basis: 10%;
+    }
+</style>
+<body>
+    <div class="background">
+        <nav>
+            <img src="Log.png" alt="logo" class="logo">
+            <ul>
+                <li><a href=""></a>Feature</li>
+                <li><a href=""></a>How it works</li>
+                <li><a href=""></a>Privacy</li>
+            </ul>
+            <div>
+                <a href="" class="login-btn">Login</a>
+                <a href="" class="btn">Download App</a>
+            </div>
+        </nav>
+        <div class="content">
+            <h1 class="animation">Muny<br>Image Gallery</h1>
+            <div class="gallery">
+                <div class="image-box active"> 
+                     <img src="Muny8.png"alt="">
+                 </div>
+                 <div class="image-box"> 
+                     <img src="Muny1.png"alt="">
+                 </div>
+                 <div class="image-box"> 
+                     <img src="Muny4.png"alt="">
+                 </div>
+                 <div class="image-box"> 
+                     <img src="Muny6.png"alt="">
+                 </div>
+                 <div class="image-box"> 
+                     <img src="Muny5.png"alt="">
+                 </div>
+             </div>
+            <p class="animation">This website write to be part of my stratup to br software Development for this Year2 but not for all is happen, I try my best to be but now for all!, Keep going, Learn more, Research for new ,Try with another way!.
+            </p>
+            <a href="" class="btn animation">Join now</a>
+        </div>
+        <img src="none"  class="image animation">
+    </div>
+</body>
+</html>
